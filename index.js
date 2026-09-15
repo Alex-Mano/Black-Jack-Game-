@@ -1,9 +1,8 @@
 let cards = [] 
 let sum = 0
-let messageEl = document.getElementById("messageEl");
-let sumEl = document.getElementById("sumEl")
-
-messageEl.textContent = "miau"
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
 
 function getRandomInt(min, max) {
     // Math.random() gives a decimal between 0 and 1
@@ -16,18 +15,31 @@ function sumCards (numbersArray){
     for (var card of cards ) {
         total += card
     }
-
     return total
+}
+
+function newGame(){
+    let cards = [] 
+    sum = 0
+    
+}
+
+function newCard (){
+    cards.push(getRandomInt(1,10))
 }
 
 function gameLoop(){
     //asign cards
-    cards.push(getRandomInt(1,10),getRandomInt(1,10))
+    newCard()   
+    cardsEl.textContent = cards
     sum = sumCards(cards)
-    sumEl.innerText = "Your total is: " + sum
+    sumEl.textContent = "Your total is: " + sum
 
     if (sum < 21) {
-        messageEl.innerText = "You're still in the game! Draw antoher?"
+        messageEl.textContent = "You're still in the game! Draw antoher?"
+    }
+    else {
+messageEl.textContent = "You're out!"
     }
     
     
@@ -35,9 +47,8 @@ function gameLoop(){
     console.log(sum)
     
 }
-
-gameLoop()
-
-function newCard (){
-    cards.push(getRandomInt(1,10))
+function newGame(){
+    let cards = [] 
+    sum = 0
+    
 }
