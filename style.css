@@ -1,0 +1,32 @@
+body{
+    background-image: url(images/kseniya-lapteva-A4rqd2g-eLo-unsplash.jpg);
+    object-fit: cover;
+
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 400;
+}
+
+#mainContainer{
+    color: white;
+    text-align: center;
+
+}
+
+button{
+    display: flex;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;     
+    font-size: medium;
+    margin: 10px auto;
+    width: 200px;
+    padding: 10px;
+    font-weight: 600;
+}
