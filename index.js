@@ -10,18 +10,21 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function newGame(){
+    cards = [] 
+    sum = 0
+    cardsEl.textContent = " "
+    messageEl.textContent = "Welcome"
+    sumEl.textContent = " "
+    
+}
+
 function sumCards (numbersArray){
     let total = 0
     for (var card of cards ) {
         total += card
     }
     return total
-}
-
-function newGame(){
-    let cards = [] 
-    sum = 0
-    
 }
 
 function newCard (){
@@ -31,7 +34,7 @@ function newCard (){
 function gameLoop(){
     //asign cards
     newCard()   
-    cardsEl.textContent = cards
+    cardsEl.textContent = "Your cards are: " + cards
     sum = sumCards(cards)
     sumEl.textContent = "Your total is: " + sum
 
@@ -47,8 +50,4 @@ messageEl.textContent = "You're out!"
     console.log(sum)
     
 }
-function newGame(){
-    let cards = [] 
-    sum = 0
-    
-}
+
